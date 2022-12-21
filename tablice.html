@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <!--da bi bolje razumjeli tablicu, dodajmo okvire-->
+   <head>
     <style>
         table, th td {
             border:1px solid black;
-            border-collapse:collapse; /*ne želimo dupli obrub */
+            border-collapse:collapse; 
         }
     </style>
+    </head>
     <body>
 
-<h2> Osnovna tablica s okvirima</h2>
-<table style="width:100%;">
-<thead>
+<h2> Vertikalni Table naslovi</h2>
+<p> Prva kolona postaje naslov tablice ukoliko se u svakom retku (tr) postavi</p>
+<table border="1">
     <tr>
-        <th> naziv 1</th>
-        <th> naziv 2</th>
-    </tr>
-</thead>
-><tbody>
-    <tr>
-        <td>Ćelija 1 u 1. retku</td>
-        <td>Ćelija 2 u 1. retku</td>
-    </tr>
-    <tr>
-        <td>Ćelija 3 u 2. retku</td>
-        <td>Ćelija 4 u 2. retku</td>
-    </tr>
-</tbody>
+        <td colspan="3" width="320">Prvi stupac</td>
+       
+        </tr>
+        <tr>
+            <td>Prvi stupac</td>
+            <td>Drugi stupac</td>
+            <td>Treći stupac</td>
+        
+        
+ </tr>
+        
 </table>
 
-
-
-    </body>
+</body>
 
 </html>
