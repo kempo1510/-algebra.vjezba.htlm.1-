@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+body {
+    
+    font-family: arial;
+
+}
+
+section{
+
+    border: gray solid 2px;
+
+}
+
+ul.no-bullets{
+    list-style-type: none;
+}
+
+hr{
+    border:red dotted 2px;
+}
+
+::marker{
+    color: red;
+}
+
+p::first-letter{
+color: blue;
+font-size: 2em;
+
+}
+.upper-slova{
+
+    list-style-type:upper-alpha;
+}
+
+.lower-slova{
+
+    list-style-type:lower-alpha;
+}
+
+span::after{
+    content: " \2713";
+    font-size: 16px;
+    color: green;
+    font-weight: 900;
+}
+
+a::before{
+    content: "\2023";
+    font-size: 24px;
+    color: red;
+}
+
+a:link{
+    color: red;
+    text-decoration: underline;
+}
+
+a:visited{
+    color: blueviolet;
+    background-color: yellow;
+}
+a:hover{
+    color:yellow;
+background-color: lawngreen;    
+}
+a:active{
+
+    color:lawngreen;
+    background-color: yellow;
+
+}
+
+
+</style>
+<body>
+  <h1>Zadatak1</h1>
+  <section>
+<p>
+    1 Koji je glavni grad Hrvatske?
+</p>
+<ol class="upper-slova">
+<li>Koprivnica</li>
+<li>Osijek</li>
+<li><span>Zagreb</span></li>
+<li>Rijeka</li>
+</ol>
+  </section> 
+  <hr>
+  <section>
+<p>
+    2 Koja je rijeka koja protječe kroz Hrvatsku najduža?
+</p>
+<ol class="lower-slova">
+<li>Mura</li>
+<li><span>Sava</span></li>
+<li>Drava</li>
+<li>Dunav</li>
+</ol>
+</section>
+<hr>
+<section>
+    <p>
+        3 Pogledajte sljedeće video linkove
+    </p>
+
+    <ul class="no-bullets">
+    <li><a href="https://www.youtube.com/watch?v=y_p4cSklyik&ab_channel=MartyMusic" target="_blank">Play bass guitar</a></li>
+<li><a href="https://www.youtube.com/watch?v=0fbxmdPX-lA&ab_channel=InsiderTech">Stop eating sugar</a></li>
+<li><a href="Treći">Treći</a></li>
+<li><a href="Četvrti">Četvrti</a></li>
+<li><a href="Peti">Peti</a></li>
+</ul>
+</section>
+
+
+</body>
+</html>
