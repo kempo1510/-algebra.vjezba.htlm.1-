@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+
+.Header 
+{
+
+float:left;
+width: 100%;
+padding: 0.5em 0;
+
+}
+
+
+.Header h1
+{
+
+font-family: Arial, sans-serif;
+color: #6a4aed;
+font-size: 26px;
+font-weight: 700;
+margin: 0;
+line-height: normal;
+
+}
+
+header 
+{
+
+    display: block;
+
+}
+
+
+div.header-line
+{
+
+    box-sizing: border-box; /* or not */
+    margin: 0 auto;
+    width: 25rem;
+    background: white;
+    padding: 30px;
+    text-align: center;
+
+}
+.full-width-header {
+
+    position:relative; /* child absolute*/
+    /* negative offset=section padding */
+    margin: 0-30px;
+    /* add back section padding value */
+    padding: .25rem 30px;
+    background: white;
+    color: white;
+    font-size: 1.125rem;
+
+}
+
+.full-width-header:before, .full-width-header:after{
+    content: "";
+    position: absolute;
+    /* fill vertically */
+    top: 0;
+    bottom: 0;
+    width: 960px;
+    /* Ukoliko je širina premala kod resize ekrana neće biti dobro,
+    stavimo na veću broju */
+    right: 100%;
+    background: red;
+
+}
+
+.full-width-header:after{
+  
+   width: 960px;
+   /* Također i kod ovoga ukoliko je širina premala kod resize ekrana neće biti dobro, 
+   stavimo na veću brojku */
+   left: 100%;
+/* not browser prefixed */
+   background: blue;
+
+}
+
+.tab-container
+
+{
+    position: relative;
+    background: #2652cc;
+    width: 120px;
+    height: 100vh;
+    float: left;
+    z-index: 20;
+
+}
+
+.tabs-container label
+
+{
+position: relative;
+padding: 10px;
+border-bottom: 1px solid greenyellow;
+display: block;
+font-size: 13px;
+color: whitesmoke;
+cursor: pointer;
+user-select: none;
+
+}
+
+.tabs-container label:hover
+{
+    background: darkslateblue;
+}
+
+</style>
+<body>
+
+    <header class="Header">
+
+        <div class="header-line">
+
+            <h1 class="full-width-header">Moja stranica sa vertikalnim tabovima</h1>
+
+
+        </div>
+</header>
+
+<div class="content"></div>
+
+<section class="tab-container">
+
+    <label1 for="tab1">Priroda</label1>
+    <label1 for="tab2">Cvijeće</label1>
+    <label1 for="tab3">Planine</label1>
+    <label1 for="tab4">Zgrade</label1>
+    <label1 for="tab5">Ceste</label1>
+    <label1 for="tab6">Šume</label1>
+
+
+</section>
+
+<input name="tab" id="tab1" type="radio" checked />
+<section class="tab-content">
+
+    <h2>Priroda</h2>
+    <p>Neki moj tekst koji je povezan sa prirodm</p>
+
+    <img src="https://image.dnevnik.hr/media/images/1024xX/Apr2021/62073496.jpg" alt="Planina" />
+    <p>Opis koji će se odnositi na prethodnu sliku prirode</p>
+
+</section>
+
+<input name="tab" id="tab2" type="radio" />
+<section class="tab-content">
+
+<h2>Cvijeće</h2>
+<img src="https://cvjetnibuketi.hr/images/made/images/uploads/image0_(6)_768_1024_80.jpg" alt="Cvijeće" />
+</section>
+
+</body>
+</html>
