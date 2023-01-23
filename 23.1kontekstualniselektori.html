@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektori indirektni kontekstualni</title>
+</head>
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+div p{
+    text-decoration: underline;
+}
+
+.naznaka p{
+    color: red;
+}
+
+.naznaka .tekst{
+
+    background-color: yellow;
+    font-style: italic;
+}
+</style>
+<body>
+<p>
+    Paragraf unutar div-a, paragraf je prvi potomak div elementa, na njemju je primjenjena
+samo dekoracija podcrtanosti.
+</p>
+    <div class="naznaka">
+
+        <p>
+            Paragraf unutar div-a, paragraf je prvi potomak div elementa, na njemju je primjenjena
+        samo dekoracija podcrtanosti.
+        </p>
+
+        <p class="tekst">
+
+Paragraf unutar div-a, paragraf je prvi potomak div elementa, na njemju je primjenjena
+samo dekoracija podcrtanosti.
+
+        </p>
+    </div>
+</body>
+</html>
