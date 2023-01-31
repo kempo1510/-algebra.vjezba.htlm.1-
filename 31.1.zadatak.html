@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+body {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1240px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f6f6;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 300;
+    flex: 1;
+}
+
+.product-filter {
+    display: flex;
+    padding: 30px 0;
+}
+
+.sort{
+    display: flex;
+    align-self: flex-end;
+}
+
+.colection-sort {
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-sort:first-child {
+
+    padding-right: 20px;
+}
+
+label{
+    color: #666;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+.products{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    flex: 1 15%;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.product-info{
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+@media (max-width:600px){
+    .product-card{
+        flex: 1 45%;
+    }
+}
+
+@media (max-width:920px){
+    .product-card{
+        flex: 1 20%;
+    }
+}
+
+.products .product-card:first-child,
+.products .product-card:nth-child(2){
+    flex: 2 45%;
+}
+ 
+@media (max-width: 480px){
+    h1{
+        margin-bottom: 20px;
+    }
+
+.product-filter{
+    flex-direction: column;
+}
+
+.sort{
+    display: inline-block;
+    align-self:flex-start;
+}
+
+}
+
+
+
+</style>
+<body>
+   <nav class="product-filter">
+
+    <h1>Proizvodi</h1>
+
+    <div class="sort">
+
+<div class="collection-sort">
+
+<label>Filtriraj po:</label>
+
+<select>
+
+<option value="/">Svi proizvodi</option>
+<option value="/">2023</option>
+<option value="/">Jakne</option>
+<option value="/">Ženske jakne</option>
+<option value="/">Muške jakne</option>
+
+</select>
+</div>
+
+<div class="collection-sort">
+
+    <label>Sortiraj po:</label>
+    <select>
+
+        <option value="/">Izabrani</option>
+        <option value="/">Najprodavanije</option>
+        <option value="/">Jakne</option>
+        <option value="/">Abecedno, A-Z</option>
+        <option value="/">Abecedno, Z-A</option>
+        
+        </select>
+
+</div>
+    </div>
+   </nav>
+
+<section class="products">
+
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://retroshop.ba/images/thumbs/703803511-Z3923-1_600.jpg">
+        </div>
+        <div class="product-info">
+            <h5>Zimska jakna</h5>
+            <h6>€99.99</h6>
+        </div>
+    </div>
+
+<div class="product-card">
+        <div class="product-image">
+            <img src="https://img.cdn-cnj.si/img/500/500/8e/8e3THBKYeNmw">
+        </div>
+        <div class="product-info">
+            <h5>Zimska jakna</h5>
+            <h6>€199.99</h6>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://retroshop.ba/images/thumbs/703803511-Z3923-1_600.jpg">
+        </div>
+        <div class="product-info">
+            <h5>Zimska jakna</h5>
+            <h6>€99.99</h6>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://img.cdn-cnj.si/img/500/500/8e/8e3THBKYeNmw">
+        </div>
+        <div class="product-info">
+            <h5>Zimska jakna</h5>
+            <h6>€199.99</h6>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://retroshop.ba/images/thumbs/703803511-Z3923-1_600.jpg">
+        </div>
+        <div class="product-info">
+            <h5>Zimska jakna</h5>
+            <h6>€99.99</h6>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://img.cdn-cnj.si/img/500/500/8e/8e3THBKYeNmw">
+        </div>
+        <div class="product-info">
+            <h5>Zimska jakna</h5>
+            <h6>€199.99</h6>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
