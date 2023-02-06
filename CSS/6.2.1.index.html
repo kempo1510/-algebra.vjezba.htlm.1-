@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+</head>
 <style>
-
 div{
     width: 150px;
     height: 150px;
@@ -16,10 +16,9 @@ div{
     color: white;
     text-align: center;
 
-    top: 100px;
-    left: 175px;
-
-
+    top: 50px;
+    left: 100px;
+    
 }
 
 #div-1{
@@ -28,23 +27,16 @@ div{
 
 #div-2{
 
-    transform: scale(3, 1.5);
-    /*
-    -ako stavimo kondirnate u minus onda bude na drugoj strani
-    - možemo ga koristiti i drugim vrijednostima kao što su  postotci
-    
-    */
+    transform: translate(100px,20px) scale(0.8) rotate(30deg);
+   
     background-color: tomato;
     opacity: 0.8;
 
 }
 
-
-
 </style>
-</head>
 <body>
-   <div id="div-1">original</div>
-   <div id="div-2">transformirani</div> 
+    <div id="div-1">original</div>
+    <div id="div-2">transformed</div>
 </body>
 </html>
