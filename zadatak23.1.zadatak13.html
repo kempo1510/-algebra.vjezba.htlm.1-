@@ -10,7 +10,17 @@
 </head>
 <style>
 
-.Header 
+
+header 
+{
+
+    display: block;
+
+}
+
+
+
+.header 
 {
 
 float:left;
@@ -20,7 +30,7 @@ padding: 0.5em 0;
 }
 
 
-.Header h1
+.header h1
 {
 
 font-family: Arial, sans-serif;
@@ -32,12 +42,7 @@ line-height: normal;
 
 }
 
-header 
-{
 
-    display: block;
-
-}
 
 
 div.header-line
@@ -55,16 +60,16 @@ div.header-line
 
     position:relative; /* child absolute*/
     /* negative offset=section padding */
-    margin: 0-30px;
+    margin: 0 -30px;
     /* add back section padding value */
     padding: .25rem 30px;
     background: white;
     color: white;
     font-size: 1.125rem;
-
 }
 
-.full-width-header:before, .full-width-header:after{
+
+.full-width-header::before, .full-width-header::after{
     content: "";
     position: absolute;
     /* fill vertically */
@@ -75,21 +80,19 @@ div.header-line
     stavimo na veću broju */
     right: 100%;
     background: red;
-
 }
 
-.full-width-header:after{
+
+
+    .full-width-header::after{
   
-   width: 960px;
-   /* Također i kod ovoga ukoliko je širina premala kod resize ekrana neće biti dobro, 
-   stavimo na veću brojku */
-   left: 100%;
 
-   background: blue;
 
+.content{
+    line-height: 28px;
 }
 
-.tab-container
+.tabs-container
 
 {
     position: relative;
@@ -100,6 +103,13 @@ div.header-line
     z-index: 20;
 
 }
+
+.tabs-container label:hover
+{
+    background: darkslateblue;
+}
+
+
 
 .tabs-container label
 
@@ -115,15 +125,55 @@ user-select: none;
 
 }
 
-.tabs-container label:hover
-{
+
+
+input[name="tab"]{
+    display: none;
+}
+
+.tab-content{
+
+    position: relative;
+    background: #eee;
+    width: calc(100% - 120px);
+    min-height:100vh;
+    padding: 15px;
+    float:left;
+    box-sizing: border-box;
+    z-index: 19;
+    display:none;
+
+}
+.tab-content:after{
+    content: "";
+    clear: both;
+}
+
+.tabs-container label:hover{
     background: darkslateblue;
 }
+
+input[name="tab"]:checked + .tab-content{
+    display:block;
+    animation: slide 0.5s forwards;
+}
+@keyframes slide{
+    from{
+        left: -100%;
+        opacity: 0;
+    }
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+
 
 </style>
 <body>
 
-    <header class="Header">
+    <header class="header">
 
         <div class="header-line">
 
@@ -135,14 +185,14 @@ user-select: none;
 
 <div class="content"></div>
 
-<section class="tab-container">
+<section class="tabs-container">
 
-    <label1 for="tab1">Priroda</label1>
-    <label1 for="tab2">Cvijeće</label1>
-    <label1 for="tab3">Planine</label1>
-    <label1 for="tab4">Zgrade</label1>
-    <label1 for="tab5">Ceste</label1>
-    <label1 for="tab6">Šume</label1>
+    <label for="tab1">Priroda</label>
+    <label for="tab2">Cvijeće</label>
+    <label for="tab3">Planine</label>
+    <label for="tab4">Zgrade</label>
+    <label for="tab5">Ceste</label>
+    <label for="tab6">Šume</label>
 
 
 </section>
@@ -162,6 +212,7 @@ user-select: none;
 <section class="tab-content">
 
 <h2>Cvijeće</h2>
+<p>Duis aute irure dolor in reprehederit in voluptate velit esse cillum dolore</p>
 <img src="https://cvjetnibuketi.hr/images/made/images/uploads/image0_(6)_768_1024_80.jpg" alt="Cvijeće" />
 </section>
 
